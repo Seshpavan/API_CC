@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Converter</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <% if (locals.resultd) {%>
+        <h2> <%= resultd %> </h2>
+    <% } else { %>
+    <h1>Crypto Currency Converter</h1>
+    
+    <form action="/convert" method="post">
+        <!-- <input type="text" name="amount" placeholder="Enter amount"> -->
+        <select name="from">
+            <option value="BTC">Bitcoin</option>
+            <option value="ETH">Ethereum</option>
+            <option value="XRP">Ripple</option>
+            <option value="LTC">Litecoin</option>
+        </select>
+        <select name="to">
+            <option value="USD">US Dollars</option>
+            <option value="USDT">USD TETHER</option>
+            <option value="GBP">Pounds</option>
+            <option value="EUR">EUROS</option>
+        </select>
+        <button type="submit">Convert</button>
+        <% } %>
+</body>
+</html>
